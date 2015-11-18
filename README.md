@@ -1,13 +1,25 @@
 =======================================
+Requirments
+=======================================
+
+- php 5.3
+- MySql database(5.5.44). 
+- composer
+- php cli
+- git
+
+=======================================
 Installation process 
 =======================================
 
-- cd to working directory.
+- Open terminal, cd to working direcotry and type: git clone https://github.com/djnikola/lendico.git
+- type: cd lendico/.
+- type: composer install
 - Change credentials for database in app/config/parametars.yml
-- Creating database. cd to working directory lendico and type: php app/console doctrine:database:create
+- Creating database. type: php app/console doctrine:database:create
 - Creating database schema: php app/console doctrine:schema:create
 - Fill database with data:  php app/console doctrine:fixtures:load
-- You can now run service
+- You can now run service: php app/console server:run
 
 
 =======================================
@@ -70,6 +82,5 @@ A: Transactions are atomic operators that either are executed or not. If not it 
 
 Q: Architecture: what are the contexts, domains, entities, attributes?
 A: Domain is area of a problem. Contexts are different views of some domain. Entities are object that just hold data information. Attributes are properties of entities. 
-
 
 
