@@ -1,0 +1,3 @@
+accounts:
+    type:   rest
+    resource: 'Lendico\AccountBundle\Controller\AccountsController'

@@ -1,0 +1,13 @@
+accounts:
+    type: rest
+    resource: "@LendicoAccountBundle/Resources/config/routing.yml"
+    prefix: api/v1
+
+NelmioApiDocBundle:
+    resource: "@NelmioApiDocBundle/Resources/config/routing.yml"
+    prefix:   /api/doc
+    
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+    

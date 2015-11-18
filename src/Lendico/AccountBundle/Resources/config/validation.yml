@@ -1,0 +1,34 @@
+Lendico\AccountBundle\Entity\Account:
+    properties:
+        name:
+            - NotBlank: ~
+            - NotNull: ~
+            - Length:
+                min: 2
+                max: 255
+                minMessage: "Your account name must be at least  characters length"
+                maxMessage: "Your account name cannot be longer than  characters length"
+        status:
+            - Choice:
+                choices:  [active, inactive]
+                message:  Choose a valid status(active, inactive).
+       
+Lendico\AccountBundle\Entity\AccountAmount:
+    properties:
+        account:
+            - NotBlank: ~
+            - NotNull: ~
+        amount:
+            - NotBlank: ~
+            - NotNull: ~
+            - GreaterThanOrEqual:
+                value: 0
+        currency:
+            - NotBlank: ~
+            - NotNull: ~
+            - Choice: 
+                choices: [USD, EUR, CHF]
+                message:  Choose a valid currency (USD, EUR, CHF).
+            
+        
+       
